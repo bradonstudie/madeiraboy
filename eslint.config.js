@@ -18,7 +18,9 @@ export default [
             ecmaVersion: 'latest',
             sourceType: 'module',
         },
-        rules: {},
+        rules: {
+            'no-console': 'warn'
+        },
     },
 
     // chosen typescript defaults - could not get this working
