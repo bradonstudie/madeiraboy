@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import bunnyUrl from '../assets/bunny.png';
+import bunnyUrl from '../../assets/bunny.png';
 </script>
 
 <style scoped>
@@ -24,5 +24,6 @@ import bunnyUrl from '../assets/bunny.png';
 
 a {
     text-decoration: none;
+    color: #aa828f;
 }
 </style>

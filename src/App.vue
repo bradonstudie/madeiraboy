@@ -1,31 +1,24 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
-import HeaderBar from './components/HeaderBar.vue';
+import { FooterBar, HeaderBar, NavigationMenu } from './components/layout';
+import type { NavItem } from './interfaces';
+
+const navItems: NavItem[] = [
+    { path: '/tattoos', title: 'tattoos' },
+    { path: '/audio', title: 'audio' },
+    { path: '/visuals', title: 'visuals' },
+    { path: '/shop', title: 'shop' },
+    { path: '/contact', title: 'contact' },
+];
 </script>
 
 <template>
     <div class="container">
         <HeaderBar />
-        <nav class="nav justify-content-center">
-            <RouterLink to="/tattoos" exactActiveClass="active" class="nav-link"
-                >tattoos</RouterLink
-            >
-            <RouterLink to="/audio" exactActiveClass="active" class="nav-link"
-                >audio</RouterLink
-            >
-            <RouterLink to="/visuals" exactActiveClass="active" class="nav-link"
-                >visuals</RouterLink
-            >
-            <RouterLink to="/shop" exactActiveClass="active" class="nav-link"
-                >shop</RouterLink
-            >
-            <RouterLink to="/contact" exactActiveClass="active" class="nav-link"
-                >contact</RouterLink
-            >
-        </nav>
+        <NavigationMenu :nav-items="navItems" />
         <main>
             <RouterView />
         </main>
+        <FooterBar />
     </div>
 </template>
 

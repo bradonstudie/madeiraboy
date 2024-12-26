@@ -6,12 +6,15 @@ import {
 } from 'vue-router';
 
 import App from './App.vue';
-import AudioView from './components/AudioView.vue';
-import ContactView from './components/ContactView.vue';
-import HomeView from './components/HomeView.vue';
-import ShopView from './components/ShopView.vue';
-import TatoosView from './components/TatoosView.vue';
-import VisualsView from './components/VisualsView.vue';
+
+import {
+    AudioView,
+    ContactView,
+    HomeView,
+    ShopView,
+    TattoosView,
+    VisualsView,
+} from './components/pages';
 
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,7 +25,7 @@ const routes: RouteRecordRaw[] = [
     { path: '/contact', component: ContactView },
     { path: '/', component: HomeView },
     { path: '/shop', component: ShopView },
-    { path: '/tattoos', component: TatoosView },
+    { path: '/tattoos', component: TattoosView },
     { path: '/visuals', component: VisualsView },
 ];
 
